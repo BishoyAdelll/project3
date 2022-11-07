@@ -1,0 +1,215 @@
+:root {
+    --backgroundColor: #d8d8d8;
+    --color: #00000;
+    --iconBackGround: #bcbcbc;
+    --color2: #ffffff;
+    --color: #6f6f6f;
+    --backGround2: #e8e8e8;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+body {
+    position: relative;
+}
+
+.firstPart {
+    width: 300px;
+    background-color: var(--backgroundColor);
+    position: absolute;
+    left: 20px;
+    top: 30px;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: bold;
+    max-height: fit-content;
+}
+
+.parent {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 10px var(--color);
+    margin-top: 5%;
+
+}
+
+h2 {
+    font-weight: 400;
+
+}
+
+.input {
+    margin-top: 5%;
+    border: 1px dashed var(--color);
+    border-radius: 10px;
+    padding: 10px 25px;
+}
+
+a h2 {
+    color: #6f6f6f;
+}
+
+a i {
+    background-color: var(--iconBackGround);
+    border-radius: 50%;
+    border: 5px solid var(--iconBackGround);
+    color: var(--color2);
+    font-size: 12px;
+    padding: 2px;
+    margin: 1px;
+}
+
+/* second part--------------------------------------------------------------------------------------------- */
+.secondSection {
+    position: absolute;
+    top: 30px;
+    left: 500px;
+    height: 410px;
+    width: 400px;
+    background-color: var(--backGround2);
+    border-radius: 10px;
+    border: 4px solid var(--backgroundColor);
+}
+
+.container2 {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px var(--color);
+    height: 100%;
+
+}
+
+.part1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+    font-weight: 400;
+}
+
+.icon a i {
+    font-size: 8px;
+}
+
+hr {
+    background-color: var(--color);
+    width: 100%;
+    height: 1px;
+    border: none;
+    opacity: 0.2;
+}
+
+/* ------------------------ check box changes ---------------------------------------------------- */
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 30px;
+    left: 10px;
+    top: 20px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: fit-content;
+
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: var(--backgroundColor);
+
+}
+
+.container input:checked~.checkmark {
+    background-color: var(--backgroundColor);
+
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked~.checkmark:after {
+    display: block;
+}
+
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid rgb(16, 15, 15);
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.line {
+    text-decoration: line-through;
+}
+
+/* --------------------------------responsive ---------*/
+@media only screen and (max-width:400px) {
+    .firstPart {
+        width: 80%;
+        
+    }
+    .secondSection {
+        left: 20px;
+        top: 370px;
+        width: 86%;
+        height: 300px;
+    }
+}
+
+@media only screen and (min-width:410px) {
+    .firstPart {
+        width: 300px;
+        display: block;
+        
+    }
+    .secondSection {
+        left: 400px;
+        width: 300px;
+        height: 300px;
+    }
+}
+@media only screen and (min-width:800px) {
+    .firstPart {
+        width: 300px;
+        display: block;
+        
+    }
+    .secondSection {
+        left: 500px;
+        width: 400px;
+        height: 410px;
+    }
+}
